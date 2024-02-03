@@ -8,7 +8,8 @@ function start(){
         document.getElementById(element).style="";
     })
     for(let element of document.getElementsByClassName("tile")){
-        element.setAttribute('onClick','select(this)')
+        element.addEventListener('click',()=>{select(element)})
+
     }
     sequence=[]
     var i=0;
@@ -44,4 +45,4 @@ function check(){
 }
 
 load_data();
-document.getElementById("start").addEventListener('click',start)
+document.getElementById("start_button").addEventListener('click',start)
