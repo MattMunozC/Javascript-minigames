@@ -52,12 +52,16 @@
         check()
     }
     function check(){
+        var complete=true;
         for(let i=0;i<guess.length;i++){
             if(guess[i]!=sequence[i]){
                 document.body.style="background-color:red";
+                complete=false;
             }
         }
-
+        if(guess.length==sequence.length && complete==true){
+            document.body.style="background-color:green";
+        }
     }
 </script>
 <style>
