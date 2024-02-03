@@ -1,0 +1,1 @@
+This repository contain multiple small minigames that can be played on the browser, currently contains an small barely functional version of Simon Say, it will updated at some point but don't expect much from it
