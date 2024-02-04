@@ -1,0 +1,98 @@
+:root{
+    --color1:yellow;
+    --color2:red;
+    --color3:purple;
+    --color4:blue;
+    --color5:green;
+    --color6:aquamarine;
+    --color7:teal;
+    --color8:lightblue;
+    --color9:orange;
+}
+button{
+    margin:10px;
+    padding: 10px;
+}
+body{
+    background-color: black;
+    color:white
+}
+#content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#board{
+    width: 20%;
+    aspect-ratio: 1/1;
+    border:10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    outline-style: solid;
+    border-color:white;
+    overflow: hidden;
+
+}
+.tile{
+    width: 100%;
+    aspect-ratio: 1/1;
+    animation: fade-out 1s ease-in-out;
+    opacity: 0;
+}
+.tile.selected{
+    opacity: 1;
+}
+.tile:nth-child(1){
+    background-color: var(--color1);
+}
+.tile:nth-child(2){
+    background-color: var(--color2);
+}
+
+.tile:nth-child(3){
+    background-color: var(--color3);
+}
+
+.tile:nth-child(4){
+    background-color: var(--color4);
+}
+
+.tile:nth-child(5){
+    background-color: var(--color5);
+}
+
+.tile:nth-child(6){
+    background-color: var(--color6);
+}
+.tile:nth-child(7){
+    background-color: var(--color7);
+}
+.tile:nth-child(8){
+    background-color: var(--color8);
+}
+.tile:nth-child(9){
+    background-color: var(--color9);
+}
+@keyframes fade-out{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        border-radius: 100%;
+    }
+}
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
