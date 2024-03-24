@@ -1,0 +1,40 @@
+img.move{
+    position: relative;
+    width: 90%;
+}
+.board{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    width: max-content;
+}
+.tile{
+    display: flex;
+    width: 100px;
+    aspect-ratio: 1/1;
+    justify-content: center;
+}
+.tile:nth-child(n+1):nth-child(-n+3){
+    border-bottom: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+.tile:nth-child(n+4):nth-child(-n+6){
+    border-bottom: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+.tile:nth-child(3n-1){
+    border-left-color: black;
+    border-left: 1px;
+    border-left-style: solid;
+    border-right-color: black;
+    border-right: 1px;
+    border-right-style: solid;
+}
+.cross{
+    filter: invert(17%) sepia(86%) saturate(6634%) hue-rotate(358deg) brightness(99%) contrast(113%)
+}
+.circle{
+    filter: invert(8%) sepia(100%) saturate(5996%) hue-rotate(246deg) brightness(111%) contrast(148%);
+}
